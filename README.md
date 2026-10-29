@@ -3,44 +3,46 @@
 > **Repository Location:** `s:\gravity projects\summary of all projects\README.md`  
 > **Source Directory:** `S:\gravity projects`  
 > **Author:** Maddila Santhosh Kumar  
-> **Master Purpose:** Single-source-of-truth reference documentation for all engineering projects. Every project contains its **exact folder name on disk**, **problem statement & purpose**, **complete tech stack**, **operational architecture & request flow**, **key features**, and **pin-to-pin implementation highlights**.
+> **GitHub Profile:** [https://github.com/Santhosh939s](https://github.com/Santhosh939s)  
+> **Master Purpose:** Single-source-of-truth reference documentation for all engineering projects. Every project contains its **exact folder name on disk**, **corresponding GitHub repository link**, **problem statement & purpose**, **complete tech stack**, **operational architecture & request flow**, **key features**, and **pin-to-pin implementation highlights**.
 
 ---
 
 ## 📑 Master Navigation Index (24 Projects)
 
-| # | Actual Folder Name on Disk | Project Name | Domain / Category | Core Tech Stack |
+| # | Actual Folder Name on Disk | Project Name | Domain / Category | GitHub Repository |
 | :-: | :--- | :--- | :--- | :--- |
-| **01** | [`MSK Code Arena - AI-Powered Coding Practice Platform`](#01-msk-code-arena---ai-powered-coding-practice-platform) | **MSK Code Arena** | Full-Stack Online Judge & Sandbox | React 18, Next.js, Node.js, Express, C++17, Gemini AI |
-| **02** | [`Hospital Appointment and Resource Management`](#02-hospital-appointment-and-resource-management-caresync-mobile) | **CareSync Mobile & Hospital ERP** | Healthcare & Mobile Systems | Flutter, Dart, Node.js, Express, MongoDB, Python |
-| **03** | [`SwitchAI`](#03-switchai---universal-ai-memory--multi-model-router) | **SwitchAI** | Distributed AI Gateway & Memory | Python 3.8+, FastAPI, SQLAlchemy, SQLite, 8 AI Adapters |
-| **04** | [`CryptoFlow-IDS-main`](#04-cryptoflow-ids---encrypted-traffic-intrusion-detection-system) | **CryptoFlow-IDS** | Cyber Defense & Security Analytics | C++ (eBPF), Python, Scapy, Random Forest, FastAPI |
-| **05** | [`End-to-End Encrypted Chat Platform`](#05-end-to-end-encrypted-chat-platform-cipherlink) | **CipherLink E2EE Platform** | Zero-Knowledge Cryptography | React, Node.js, Web Crypto API (RSA+AES), Face-api.js |
-| **06** | [`REST API Security CICD Orchestrator`](#06-rest-api-security-cicd-orchestrator) | **REST API Security CI/CD Gatekeeper** | DevSecOps & Security Gatekeeping | Node.js, Express, Python, Semgrep, OWASP ZAP, Docker |
-| **07** | [`Privacy-Preserving Federated Threat Intelligence Protocol`](#07-privacy-preserving-federated-threat-intelligence-protocol-pp-ftip) | **PP-FTIP Protocol** | Decentralized zkML Cybersecurity | Python, PyTorch, zk-SNARKs (ezkl), FedAvg, Cryptography |
-| **08** | [`Secure Exam`](#08-secure-exam---enterprise-proctoring-platform) | **Secure Exam Platform** | High-Stakes Online Proctoring | Next.js, Node.js, Electron.js, MongoDB, HMAC-PRNG |
-| **09** | [`Food Processing ERP System`](#09-food-processing-erp-system) | **Food Processing ERP System** | Enterprise Supply Chain & Planning | React, Node.js, Express, MongoDB, SAP MM/PP |
-| **10** | [`skillSwap`](#10-skillswap-ai---peer-to-peer-skill-exchange) | **SkillSwap AI** | Real-Time Peer Education & WebRTC | React, Vite, Node.js, Express, WebRTC, Socket.IO |
-| **11** | [`Srmap-Api-main`](#11-srmap-api-main-srmapi-next) | **Srmapi Next** | Reverse-Engineered University Portal | Next.js 16, TypeScript, MongoDB, FastAPI, ONNX Solver |
-| **12** | [`ATS Resume Checker`](#12-ats-resume-checker-resumate-ats) | **ResuMate ATS** | Client-Side NLP & MCP Agent Server | JavaScript, Vite, Tailwind CSS, PDF.js, MCP Protocol |
-| **13** | [`Fine Tuned LLM`](#13-fine-tuned-llm-cyberdefend) | **CyberDefend AI Assistant** | Fine-Tuned Security LLM & RAG | Llama 3.1 8B, QLoRA, Qdrant Vector DB, FastAPI |
-| **14** | [`AI`](#14-ai-teacher-whiteboard-mvp) | **AI Teacher Whiteboard MVP** | Edge Vision AI & Interactive Canvas | Next.js, Fabric.js, FastAPI, Ollama Local Vision |
-| **15** | [`dance baby dance`](#15-dance-baby-dance---ai-choreography--3d-avatar-animation) | **Dance Baby Dance** | Audio-to-3D AI Motion Synthesis | React Three Fiber, Three.js, FastAPI, mint-main Checkpoint |
-| **16** | [`ML challenge`](#16-ml-challenge---amazon-ml-challenge-2026) | **Amazon ML Challenge: Entity Resolution**| Competitive Multimodal Machine Learning| Python, PyTorch, Transformers, DeBERTa, LightGBM |
-| **17** | [`python-project-chess-with-AI--main`](#17-chessai-web-app) | **ChessAI Web App** | Browser Game Engine & AI Evaluation | Next.js, TypeScript, Chess.js, Stockfish WASM |
-| **18** | [`TypeFlow`](#18-typeflow---minimalist-typing-speed-platform) | **TypeFlow** | High-Performance Keystroke Engine | React 18, Vite, Tailwind CSS, SVG Pace Analytics |
-| **19** | [`VNC remote connect`](#19-vnc-remote-connect-asynchronous) | **asynchronous (VNC Remote Connect)** | Encrypted Remote Desktop Control | TightVNC 2.8.90, C++, X25519 + AES-256-GCM Relay |
-| **20** | [`mouse control`](#20-gesture-control-mouse) | **Gesture Control Mouse** | Computer Vision Human-Computer Interface| Python, MediaPipe, OpenCV, PyAutoGUI, Flask Web HUD |
-| **21** | [`LoopingAgent`](#21-loopingagent-lightagent-v1) | **LightAgent V1** | Windows OS Desktop Automation | Python, PyWin32, Tkinter, Win32 Clipboard, Workflow Engine |
-| **22** | [`link please`](#22-linkplease-auto-dm---instagram-webhook-automation) | **LinkPlease Auto-DM** | High-Throughput Webhook Processing | Python, FastAPI / Flask, SQLite, Instagram Graph API |
-| **23** | [`cyber`](#23-cyber-triage-agent) | **Security Engineering Triage Agent** | Automated Vulnerability Remediation | Python, Anthropic Claude Tool-Use, GitHub REST API |
-| **24** | [`web data store`](#24-webdatastore) | **WebDataStore** | Zero-Database Cross-Device Sync | Vanilla HTML5/JS, Node.js, JSON Cloud Storage |
+| **01** | [`MSK Code Arena - AI-Powered Coding Practice Platform`](#01-msk-code-arena---ai-powered-coding-practice-platform) | **MSK Code Arena** | Full-Stack Online Judge & Sandbox | [🔗 Santhosh939s/MSK-Code-Arena](https://github.com/Santhosh939s/MSK-Code-Arena) |
+| **02** | [`Hospital Appointment and Resource Management`](#02-hospital-appointment-and-resource-management-caresync-mobile) | **CareSync Mobile & Hospital ERP** | Healthcare & Mobile Systems | [🔗 Santhosh939s/CareSync-HospitalAppointmentResourceManagementSystem](https://github.com/Santhosh939s/CareSync-HospitalAppointmentResourceManagementSystem) |
+| **03** | [`SwitchAI`](#03-switchai---universal-ai-memory--multi-model-router) | **SwitchAI** | Distributed AI Gateway & Memory | [🔗 Santhosh939s/SwitchAI](https://github.com/Santhosh939s/SwitchAI) |
+| **04** | [`CryptoFlow-IDS-main`](#04-cryptoflow-ids---encrypted-traffic-intrusion-detection-system) | **CryptoFlow-IDS** | Cyber Defense & Security Analytics | [🔗 Santhosh939s/CryptoFlow-IDS](https://github.com/Santhosh939s/CryptoFlow-IDS) |
+| **05** | [`End-to-End Encrypted Chat Platform`](#05-end-to-end-encrypted-chat-platform-cipherlink) | **CipherLink E2EE Platform** | Zero-Knowledge Cryptography | [🔗 Santhosh939s/End-to-end](https://github.com/Santhosh939s/End-to-end) |
+| **06** | [`REST API Security CICD Orchestrator`](#06-rest-api-security-cicd-orchestrator) | **REST API Security CI/CD Gatekeeper** | DevSecOps & Security Gatekeeping | [🔗 Santhosh939s/REST-API-Security-CICD-Orchestrator](https://github.com/Santhosh939s/REST-API-Security-CICD-Orchestrator) |
+| **07** | [`Privacy-Preserving Federated Threat Intelligence Protocol`](#07-privacy-preserving-federated-threat-intelligence-protocol-pp-ftip) | **PP-FTIP Protocol** | Decentralized zkML Cybersecurity | [🔗 Santhosh939s/Privacy-Preserving-Federated-Threat-Intelligence-Protocol](https://github.com/Santhosh939s/Privacy-Preserving-Federated-Threat-Intelligence-Protocol) |
+| **08** | [`Secure Exam`](#08-secure-exam---enterprise-proctoring-platform) | **Secure Exam Platform** | High-Stakes Online Proctoring | [🔗 Santhosh939s/Secure-Exam](https://github.com/Santhosh939s/Secure-Exam) |
+| **09** | [`Food Processing ERP System`](#09-food-processing-erp-system) | **Food Processing ERP System** | Enterprise Supply Chain & Planning | [🔗 Santhosh939s/Food-Processing-ERP-System](https://github.com/Santhosh939s/Food-Processing-ERP-System) |
+| **10** | [`skillSwap`](#10-skillswap-ai---peer-to-peer-skill-exchange) | **SkillSwap AI** | Real-Time Peer Education & WebRTC | [🔗 Santhosh939s/SkillSwap-AI](https://github.com/Santhosh939s/SkillSwap-AI) |
+| **11** | [`Srmap-Api-main`](#11-srmap-api-main-srmapi-next) | **Srmapi Next** | Reverse-Engineered University Portal | [🔗 Workstation / Private Deployment](https://github.com/Santhosh939s/AllProjectsSummary) |
+| **12** | [`ATS Resume Checker`](#12-ats-resume-checker-resumate-ats) | **ResuMate ATS** | Client-Side NLP & MCP Agent Server | [🔗 Workstation / MCP Suite](https://github.com/Santhosh939s/AllProjectsSummary) |
+| **13** | [`Fine Tuned LLM`](#13-fine-tuned-llm-cyberdefend) | **CyberDefend AI Assistant** | Fine-Tuned Security LLM & RAG | [🔗 Santhosh939s/Google-colab-trying-to-deal-with-LLM-s](https://github.com/Santhosh939s/Google-colab-trying-to-deal-with-LLM-s) |
+| **14** | [`AI`](#14-ai-teacher-whiteboard-mvp) | **AI Teacher Whiteboard MVP** | Edge Vision AI & Interactive Canvas | [🔗 Workstation / Ollama Suite](https://github.com/Santhosh939s/AllProjectsSummary) |
+| **15** | [`dance baby dance`](#15-dance-baby-dance---ai-choreography--3d-avatar-animation) | **Dance Baby Dance** | Audio-to-3D AI Motion Synthesis | [🔗 Santhosh939s/dance-baby-dance](https://github.com/Santhosh939s/dance-baby-dance) |
+| **16** | [`ML challenge`](#16-ml-challenge---amazon-ml-challenge-2026) | **Amazon ML Challenge: Entity Resolution**| Competitive Multimodal Machine Learning| [🔗 Workstation / Competition Suite](https://github.com/Santhosh939s/AllProjectsSummary) |
+| **17** | [`python-project-chess-with-AI--main`](#17-chessai-web-app) | **ChessAI Web App** | Browser Game Engine & AI Evaluation | [🔗 Santhosh939s/ChessWithAI](https://github.com/Santhosh939s/ChessWithAI) |
+| **18** | [`TypeFlow`](#18-typeflow---minimalist-typing-speed-platform) | **TypeFlow** | High-Performance Keystroke Engine | [🔗 Santhosh939s/TypeFlow](https://github.com/Santhosh939s/TypeFlow) |
+| **19** | [`VNC remote connect`](#19-vnc-remote-connect-asynchronous) | **asynchronous (VNC Remote Connect)** | Encrypted Remote Desktop Control | [🔗 vihivincorp/VNCremoteconnect](https://github.com/vihivincorp/VNCremoteconnect) |
+| **20** | [`mouse control`](#20-gesture-control-mouse) | **Gesture Control Mouse** | Computer Vision Human-Computer Interface| [🔗 Santhosh939s/GestureControlMouse](https://github.com/Santhosh939s/GestureControlMouse) |
+| **21** | [`LoopingAgent`](#21-loopingagent-lightagent-v1) | **LightAgent V1** | Windows OS Desktop Automation | [🔗 Santhosh939s/LoopingAgent](https://github.com/Santhosh939s/LoopingAgent) |
+| **22** | [`link please`](#22-linkplease-auto-dm---instagram-webhook-automation) | **LinkPlease Auto-DM** | High-Throughput Webhook Processing | [🔗 Workstation / Intern Assignment](https://github.com/Santhosh939s/AllProjectsSummary) |
+| **23** | [`cyber`](#23-cyber-triage-agent) | **Security Engineering Triage Agent** | Autonomous Vulnerability Remediation | [🔗 Workstation / Security Triage](https://github.com/Santhosh939s/AllProjectsSummary) |
+| **24** | [`web data store`](#24-webdatastore) | **WebDataStore** | Zero-Database Cross-Device Sync | [🔗 Santhosh939s/WebDataStore](https://github.com/Santhosh939s/WebDataStore) |
 
 ---
 
 ## 01. MSK Code Arena - AI-Powered Coding Practice Platform
 * **Actual Folder Name on Disk:** `S:\gravity projects\MSK Code Arena - AI-Powered Coding Practice Platform` *(uses Unicode en-dash `–`)*
 * **Official Project Name:** MSK Code Arena
+* **GitHub Repository:** [https://github.com/Santhosh939s/MSK-Code-Arena](https://github.com/Santhosh939s/MSK-Code-Arena)
 * **Domain / Category:** Distributed Online Judge, Compiler Sandbox & AI Synthesis
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -78,6 +80,7 @@ Coding platforms like LeetCode and HackerRank force developers into rigid, pre-c
 ## 02. Hospital Appointment and Resource Management (CareSync Mobile)
 * **Actual Folder Name on Disk:** `S:\gravity projects\Hospital Appointment and Resource Management` *(Contains `caresync_mobile` Flutter client)*
 * **Official Project Name:** CareSync Mobile & Hospital Resource ERP
+* **GitHub Repository:** [https://github.com/Santhosh939s/CareSync-HospitalAppointmentResourceManagementSystem](https://github.com/Santhosh939s/CareSync-HospitalAppointmentResourceManagementSystem)
 * **Domain / Category:** Healthcare Systems, Mobile Application Architecture & Hospital ERP
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -112,6 +115,7 @@ Outpatient departments face severe operational gridlock: long registration queue
 ## 03. SwitchAI - Universal AI Memory & Multi-Model Router
 * **Actual Folder Name on Disk:** `S:\gravity projects\SwitchAI`
 * **Official Project Name:** SwitchAI (*"One memory. Many AI models."*)
+* **GitHub Repository:** [https://github.com/Santhosh939s/SwitchAI](https://github.com/Santhosh939s/SwitchAI)
 * **Domain / Category:** Distributed AI Gateway, Context Engineering & Multi-LLM Orchestration
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -144,6 +148,7 @@ AI users suffer from severe vendor lock-in. When working in ChatGPT or Claude, c
 ## 04. CryptoFlow-IDS - Encrypted Traffic Intrusion Detection System
 * **Actual Folder Name on Disk:** `S:\gravity projects\CryptoFlow-IDS-main`
 * **Official Project Name:** CryptoFlow-IDS
+* **GitHub Repository:** [https://github.com/Santhosh939s/CryptoFlow-IDS](https://github.com/Santhosh939s/CryptoFlow-IDS)
 * **Domain / Category:** Network Intrusion Detection (NIDS), In-Kernel Packet Filtering & AI Cyber Defense
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -177,6 +182,7 @@ Over 95% of enterprise traffic is encrypted with TLS 1.3, HTTPS, and QUIC/UDP. T
 ## 05. End-to-End Encrypted Chat Platform (CipherLink)
 * **Actual Folder Name on Disk:** `S:\gravity projects\End-to-End Encrypted Chat Platform`
 * **Official Project Name:** CipherLink
+* **GitHub Repository:** [https://github.com/Santhosh939s/End-to-end](https://github.com/Santhosh939s/End-to-end)
 * **Domain / Category:** Zero-Knowledge Cryptography, Real-Time Messaging & Biometric Authentication
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -212,6 +218,7 @@ Centralized messaging platforms (Slack, Discord, unencrypted web chats) store us
 ## 06. REST API Security CICD Orchestrator
 * **Actual Folder Name on Disk:** `S:\gravity projects\REST API Security CICD Orchestrator`
 * **Official Project Name:** REST API Security CI/CD Gatekeeper & DevSecOps Testbed
+* **GitHub Repository:** [https://github.com/Santhosh939s/REST-API-Security-CICD-Orchestrator](https://github.com/Santhosh939s/REST-API-Security-CICD-Orchestrator)
 * **Domain / Category:** DevSecOps Automation, API Security & Automated Policy Enforcement
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -247,6 +254,7 @@ Modern engineering teams deploy software continuously, but application security 
 ## 07. Privacy-Preserving Federated Threat Intelligence Protocol (PP-FTIP)
 * **Actual Folder Name on Disk:** `S:\gravity projects\Privacy-Preserving Federated Threat Intelligence Protocol`
 * **Official Project Name:** PP-FTIP Protocol
+* **GitHub Repository:** [https://github.com/Santhosh939s/Privacy-Preserving-Federated-Threat-Intelligence-Protocol](https://github.com/Santhosh939s/Privacy-Preserving-Federated-Threat-Intelligence-Protocol)
 * **Domain / Category:** Decentralized Machine Learning, Zero-Knowledge Proofs (zkML) & Threat Intelligence
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -280,6 +288,7 @@ Financial institutions, hospitals, and critical infrastructure operators face id
 ## 08. Secure Exam - Enterprise Proctoring Platform
 * **Actual Folder Name on Disk:** `S:\gravity projects\Secure Exam`
 * **Official Project Name:** Enterprise Online Examination & Proctoring Platform
+* **GitHub Repository:** [https://github.com/Santhosh939s/Secure-Exam](https://github.com/Santhosh939s/Secure-Exam)
 * **Domain / Category:** EdTech Security, Anti-Cheat Kiosk Systems & Resilient Assessments
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -312,6 +321,7 @@ High-stakes online certification and university exams are plagued by student che
 ## 09. Food Processing ERP System
 * **Actual Folder Name on Disk:** `S:\gravity projects\Food Processing ERP System`
 * **Official Project Name:** Food Processing ERP System (SAP MM & SAP PP Architecture)
+* **GitHub Repository:** [https://github.com/Santhosh939s/Food-Processing-ERP-System](https://github.com/Santhosh939s/Food-Processing-ERP-System)
 * **Domain / Category:** Enterprise Resource Planning (ERP), Manufacturing & Supply Chain
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -343,6 +353,7 @@ Food manufacturing companies manage complex, highly perishable supply chains. Er
 ## 10. SkillSwap AI - Peer-to-Peer Skill Exchange
 * **Actual Folder Name on Disk:** `S:\gravity projects\skillSwap`
 * **Official Project Name:** SkillSwap AI
+* **GitHub Repository:** [https://github.com/Santhosh939s/SkillSwap-AI](https://github.com/Santhosh939s/SkillSwap-AI)
 * **Domain / Category:** Real-Time EdTech, WebRTC Video Collaboration & Community Networks
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -371,6 +382,7 @@ Traditional online tutoring is expensive and transactional. Many students and se
 ## 11. Srmap-Api-main (Srmapi Next)
 * **Actual Folder Name on Disk:** `S:\gravity projects\Srmap-Api-main`
 * **Official Project Name:** Srmapi Next
+* **GitHub Repository:** [https://github.com/Santhosh939s/AllProjectsSummary](https://github.com/Santhosh939s/AllProjectsSummary) *(Deploy Script in Workstation)*
 * **Domain / Category:** Full-Stack University Portal, Web Scraping & Automated CAPTCHA Solving
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -404,6 +416,7 @@ The official university student portal (`student.srmap.edu.in`) is slow, non-res
 ## 12. ATS Resume Checker (ResuMate ATS)
 * **Actual Folder Name on Disk:** `S:\gravity projects\ATS Resume Checker`
 * **Official Project Name:** ResuMate ATS
+* **GitHub Repository:** [https://github.com/Santhosh939s/AllProjectsSummary](https://github.com/Santhosh939s/AllProjectsSummary) *(Included in Portfolio Suite)*
 * **Domain / Category:** Natural Language Processing, Career Tech & Model Context Protocol (MCP)
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -434,6 +447,7 @@ Modern corporations filter over 75% of job applicants using automated Applicant 
 ## 13. Fine Tuned LLM (CyberDefend)
 * **Actual Folder Name on Disk:** `S:\gravity projects\Fine Tuned LLM`
 * **Official Project Name:** CyberDefend - Defensive Cybersecurity LLM & RAG Assistant
+* **GitHub Repository:** [https://github.com/Santhosh939s/Google-colab-trying-to-deal-with-LLM-s](https://github.com/Santhosh939s/Google-colab-trying-to-deal-with-LLM-s)
 * **Domain / Category:** Specialized Generative AI, RAG Architectures & Cyber Defense
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -463,6 +477,7 @@ General-purpose frontier LLMs (ChatGPT, Claude) often refuse defensive cybersecu
 ## 14. AI (AI Teacher Whiteboard MVP)
 * **Actual Folder Name on Disk:** `S:\gravity projects\AI`
 * **Official Project Name:** AI Teacher Whiteboard MVP
+* **GitHub Repository:** [https://github.com/Santhosh939s/AllProjectsSummary](https://github.com/Santhosh939s/AllProjectsSummary) *(Local Project in Workstation)*
 * **Domain / Category:** Edge Vision AI, Interactive Canvas & Autonomous Tutoring
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -491,6 +506,7 @@ Traditional online learning tools are passive: students watch videos or type mat
 ## 15. Dance Baby Dance - AI Choreography & 3D Avatar Animation
 * **Actual Folder Name on Disk:** `S:\gravity projects\dance baby dance`
 * **Official Project Name:** Dance Baby Dance
+* **GitHub Repository:** [https://github.com/Santhosh939s/dance-baby-dance](https://github.com/Santhosh939s/dance-baby-dance)
 * **Domain / Category:** Multimodal Generative AI, 3D Web Graphics & Audio-to-Motion Synthesis
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -519,6 +535,7 @@ Creating realistic 3D character animations for games, virtual influencers, and m
 ## 16. ML Challenge - Amazon ML Challenge 2026
 * **Actual Folder Name on Disk:** `S:\gravity projects\ML challenge`
 * **Official Project Name:** Amazon ML Challenge: Business Entity Resolution
+* **GitHub Repository:** [https://github.com/Santhosh939s/AllProjectsSummary](https://github.com/Santhosh939s/AllProjectsSummary) *(Competition Workspace)*
 * **Domain / Category:** Competitive Machine Learning, Natural Language Processing & Tabular Data Science
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -547,6 +564,7 @@ In large-scale e-commerce catalogs (such as Amazon), millions of product listing
 ## 17. ChessAI Web App
 * **Actual Folder Name on Disk:** `S:\gravity projects\python-project-chess-with-AI--main`
 * **Official Project Name:** ChessAI Web App
+* **GitHub Repository:** [https://github.com/Santhosh939s/ChessWithAI](https://github.com/Santhosh939s/ChessWithAI)
 * **Domain / Category:** Web Game Development, Board Game AI & WebAssembly (WASM)
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -575,6 +593,7 @@ Online chess platforms typically require heavy server-side infrastructure runnin
 ## 18. TypeFlow - Minimalist Typing Speed Platform
 * **Actual Folder Name on Disk:** `S:\gravity projects\TypeFlow`
 * **Official Project Name:** TypeFlow
+* **GitHub Repository:** [https://github.com/Santhosh939s/TypeFlow](https://github.com/Santhosh939s/TypeFlow)
 * **Domain / Category:** Frontend Performance Engineering, Client-Side Analytics & Gamified Learning
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -606,6 +625,7 @@ Typing speed practice platforms like Monkeytype are often cluttered with ads or 
 ## 19. VNC Remote Connect (asynchronous)
 * **Actual Folder Name on Disk:** `S:\gravity projects\VNC remote connect`
 * **Official Project Name:** asynchronous (VNCremoteconnect)
+* **GitHub Repository:** [https://github.com/vihivincorp/VNCremoteconnect](https://github.com/vihivincorp/VNCremoteconnect)
 * **Domain / Category:** Systems Programming, Remote Desktop Infrastructure & Network Security
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -638,6 +658,7 @@ Standard VNC (Virtual Network Computing) software transmits unencrypted framebuf
 ## 20. Gesture Control Mouse
 * **Actual Folder Name on Disk:** `S:\gravity projects\mouse control`
 * **Official Project Name:** Gesture Control Mouse
+* **GitHub Repository:** [https://github.com/Santhosh939s/GestureControlMouse](https://github.com/Santhosh939s/GestureControlMouse)
 * **Domain / Category:** Computer Vision, Human-Computer Interaction (HCI) & Automation
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -668,6 +689,7 @@ Individuals with motor impairments or professionals operating in sterile/hands-b
 ## 21. LoopingAgent (LightAgent V1)
 * **Actual Folder Name on Disk:** `S:\gravity projects\LoopingAgent`
 * **Official Project Name:** LightAgent V1 - LoopingAgent
+* **GitHub Repository:** [https://github.com/Santhosh939s/LoopingAgent](https://github.com/Santhosh939s/LoopingAgent)
 * **Domain / Category:** Robotic Process Automation (RPA), Desktop Automation & Workflow Engines
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -697,6 +719,7 @@ Knowledge workers waste countless hours on repetitive desktop tasks: copying row
 ## 22. LinkPlease Auto-DM - Instagram Webhook Automation
 * **Actual Folder Name on Disk:** `S:\gravity projects\link please`
 * **Official Project Name:** LinkPlease Auto-DM Service
+* **GitHub Repository:** [https://github.com/Santhosh939s/AllProjectsSummary](https://github.com/Santhosh939s/AllProjectsSummary) *(Internship Assignment Suite)*
 * **Domain / Category:** Social Media Automation, High-Throughput Webhook Processing & Fault Tolerance
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -730,6 +753,7 @@ Content creators on Instagram frequently prompt followers: *"Comment PRICE and I
 ## 23. Cyber Triage Agent
 * **Actual Folder Name on Disk:** `S:\gravity projects\cyber`
 * **Official Project Name:** Security Engineering Triage Agent
+* **GitHub Repository:** [https://github.com/Santhosh939s/AllProjectsSummary](https://github.com/Santhosh939s/AllProjectsSummary) *(Security Suite)*
 * **Domain / Category:** Autonomous Security Agents, Vulnerability Management & AI Tool-Use
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -760,6 +784,7 @@ Vulnerability scanners (Snyk, Trivy, Dependabot) output massive JSON reports wit
 ## 24. WebDataStore
 * **Actual Folder Name on Disk:** `S:\gravity projects\web data store`
 * **Official Project Name:** WebDataStore
+* **GitHub Repository:** [https://github.com/Santhosh939s/WebDataStore](https://github.com/Santhosh939s/WebDataStore)
 * **Domain / Category:** Real-Time Web Utilities, Lightweight Data Synchronization & P2P Data
 
 ### Why It Was Made (Problem Statement & Purpose)
@@ -788,6 +813,7 @@ Whenever you build a new project or update an existing one in `S:\gravity projec
 1. **Adding a New Project:** Insert a new row in the [Master Navigation Index](#-master-navigation-index-24-projects) and add a dedicated numbered section following the standard format:
    * **Actual Folder Name on Disk**
    * **Official Project Name & Category**
+   * **GitHub Repository Link**
    * **Why It Was Made (Problem Statement & Purpose)**
    * **Complete Tech Stack**
    * **How It Operates (Architecture & Request Flow)**
@@ -796,6 +822,6 @@ Whenever you build a new project or update an existing one in `S:\gravity projec
 3. **Version Control:** Commit and push updates to your GitHub documentation repository:
    ```bash
    git add README.md
-   git commit -m "Update project architecture and documentation"
+   git commit -m "Update project architecture, repositories, and documentation"
    git push origin main
    ```
