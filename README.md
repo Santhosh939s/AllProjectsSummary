@@ -182,37 +182,103 @@ Over 95% of enterprise traffic is encrypted with TLS 1.3, HTTPS, and QUIC/UDP. T
 
 ## 05. End-to-End Encrypted Chat Platform (CipherLink)
 * **Actual Folder Name on Disk:** `S:\gravity projects\End-to-End Encrypted Chat Platform`
-* **Official Project Name:** CipherLink
+* **Official Project Name:** CipherLink: End-to-End Encrypted Messaging Platform
 * **GitHub Repository:** [https://github.com/Santhosh939s/End-to-end](https://github.com/Santhosh939s/End-to-end)
-* **Domain / Category:** Zero-Knowledge Cryptography, Real-Time Messaging & Biometric Authentication
+* **Domain / Category:** Zero-Knowledge Cryptography, Asymmetric/Symmetric Key Encapsulation, Client-Side Biometrics & Enterprise Data Sanitization
 
 ### Why It Was Made (Problem Statement & Purpose)
-Centralized messaging platforms (Slack, Discord, unencrypted web chats) store user communications in plaintext or encrypt data only in transit (TLS), leaving messages vulnerable to database leaks, insider threats, and subpoena seizures. CipherLink was designed with a **Zero-Knowledge Architecture** where the server functions as a blind relay: all message encryption and decryption happens purely inside the user's browser, ensuring absolute conversational privacy.
+Centralized communication platforms (Slack, Discord, unencrypted messaging portals) store user data in plaintext or rely purely on transport-layer encryption (TLS). In these models, data at rest is fully accessible to cloud providers, database administrators, rogue insiders, and lawful interception. CipherLink was engineered with an absolute **Zero-Knowledge Architecture**: the backend functions as a blind cryptographic relay. Every message payload is encrypted and decrypted exclusively in the client's browser memory using native Web Cryptography, ensuring that neither the database admins nor any compromised intermediary can ever decipher user communications.
 
 ### Complete Tech Stack
-* **Frontend:** React (Vite), Tailwind CSS (Glassmorphism theme), Lucide Icons.
-* **Cryptographic Engine:** Web Crypto API (Client-Side Native Crypto).
-  * **Asymmetric:** RSA-OAEP (2048-bit keys) for user identity and key encapsulation.
-  * **Symmetric:** AES-256-GCM for ephemeral per-message encryption.
-* **Biometric Authentication:** `face-api.js` (TensorFlow) for 68-point facial landmark vector extraction.
-* **Backend:** Node.js, Express.js, Zod (Schema Validation), Bcrypt, JSON Web Tokens (JWT).
-* **Database & Email:** MongoDB Atlas (Mongoose ODM), Nodemailer with Gmail SMTP (6-digit hashed OTPs with 10-minute self-destruct).
+* **Frontend:** React 18, Vite, TypeScript, Tailwind CSS (Glassmorphism & Tactical Dark Theme), Lucide Icons.
+* **Client Cryptography Engine:** Web Crypto API (`window.crypto.subtle` native browser engine).
+  * **Asymmetric:** RSA-OAEP (2048-bit modulus, SHA-256 hash, public exponent $65537$) for key encapsulation.
+  * **Key Derivation:** PBKDF2 (100,000 iterations, SHA-256, 16-byte cryptographically random salt).
+  * **Symmetric:** AES-256-GCM (Authenticated Encryption with 12-byte IV and 128-bit authentication tag) for per-message encryption and private key envelope protection.
+* **Client-Side Biometrics:** `face-api.js` (TensorFlow.js backend) utilizing SSD MobileNet V1 for 68-point facial landmark detection and 128-dimensional feature vector extraction.
+* **Backend:** Node.js, Express.js (TypeScript), Zod (Strict Runtime Request Validation), Bcrypt, JSON Web Tokens (JWT).
+* **Database & Verification:** MongoDB Atlas (Mongoose ODM), Nodemailer with Google SMTP (6-digit OTP verification with bcrypt hashing and 10-minute self-destruct).
 
-### How It Operates (Architecture & Request Flow)
-1. **Key Generation on Registration:** The browser generates an RSA-OAEP key pair via the Web Crypto API. The public key is stored on MongoDB; the private key stays strictly encrypted in client local storage.
-2. **Hybrid Message Encryption:**
-   * Sender generates a cryptographically random 256-bit AES key.
-   * Encrypts the plaintext message payload using AES-256-GCM.
-   * Encrypts the AES key using the recipient's RSA public key.
-   * Transmits the encrypted ciphertext bundle to the Express server.
-3. **Decryption at Recipient:** The recipient receives the bundle, decrypts the AES key using their local RSA private key, and decrypts the ciphertext payload into viewable text. The server database stores only unreadable ciphertext blobs.
-4. **Biometric Face Login:** The user looks at their webcam. `face-api.js` computes a 128-dimensional facial landmark embedding, encrypts it, and verifies it against the user's registered vector profile.
-5. **Enterprise Admin Sudo Mode:** Administrative operations require re-authentication (Face or Password). User account deletion triggers a **Wipe Protocol**, physically overwriting encrypted chat payloads with system placeholders for privacy compliance.
+### System Architecture & Request Flow
 
-### Key Features & Engineering Highlights
-* **True Zero-Knowledge:** Neither database administrators nor intercepted network logs can decipher messages.
-* **AI Biometric Login:** Passwordless access using local client-side facial landmark tensor matching.
-* **Ephemeral OTP Security:** Verification OTPs are hashed with bcrypt before saving to MongoDB, preventing database exposure.
+```
++--------------------------------------------------------------------------------------------------+
+|                                  CLIENT A (BROWSER MEMORY)                                       |
+|  1. Writes plaintext: "Secret Mission Details"                                                   |
+|  2. Generates ephemeral AES-256-GCM key (`K_msg`) + 12-byte random IV                           |
+|  3. Encrypts message: C = AES-GCM(text, K_msg, IV)                                               |
+|  4. Encrypts K_msg with Recipient B's Public Key: E_rec = RSA-OAEP(K_msg, PubKey_B)              |
+|  5. Encrypts K_msg with Sender A's Public Key:    E_sen = RSA-OAEP(K_msg, PubKey_A)              |
++-------------------------------------------------+------------------------------------------------+
+                                                  |
+                                                  | POST /api/chat/messages
+                                                  | Payload: { ciphertext: C, iv, E_rec, E_sen }
+                                                  v
++--------------------------------------------------------------------------------------------------+
+|                                EXPRESS.JS BLIND RELAY API GATEWAY                                |
+|  - Validates JWT bearer session and Zod payload schema                                           |
+|  - Verifies sender & recipient are confirmed contacts                                            |
+|  - Cannot decrypt C (Holds zero private keys or master passwords)                                |
++-------------------------------------------------+------------------------------------------------+
+                                                  |
+                                                  v
++--------------------------------------------------------------------------------------------------+
+|                                    MONGODB ATLAS CLOUD STORAGE                                   |
+|  Stores only: { senderId, receiverId, ciphertext: C, iv, encryptedKeyReceiver, encryptedKeySender }|
++-------------------------------------------------+------------------------------------------------+
+                                                  |
+                                                  | GET /api/chat/messages/:contactId
+                                                  v
++--------------------------------------------------------------------------------------------------+
+|                                  CLIENT B (RECIPIENT BROWSER)                                    |
+|  1. Fetches ciphertext bundle from blind relay                                                   |
+|  2. Decrypts K_msg using local private key: K_msg = RSA-OAEP_Decrypt(E_rec, PrivKey_B)           |
+|  3. Decrypts plaintext message: text = AES-GCM_Decrypt(C, K_msg, IV)                             |
+|  4. Renders decrypted text into UI strictly within React volatile state                          |
++--------------------------------------------------------------------------------------------------+
+```
+
+### Detailed Cryptographic Implementation Highlights
+
+#### 1. Zero-Knowledge User Key Registration & Recovery
+* **RSA Keypair Generation:** Upon user signup, the browser generates an RSA-OAEP 2048-bit keypair (`window.crypto.subtle.generateKey`).
+* **Master Password Key Derivation:** The client passes the user's password through **PBKDF2** with 100,000 iterations and a random salt to produce an AES-GCM 256-bit `MasterKey`.
+* **Private Key Envelope:** The user's RSA private key is exported (`pkcs8`) and encrypted locally with this `MasterKey`.
+* **Server Storage:** The server only receives and stores the RSA **Public Key** and the **Encrypted Private Key Envelope**. The plaintext private key is never transmitted over the network and never resides on disk.
+
+#### 2. Dual-Envelope Message Encryption
+In naive E2EE systems, messages are encrypted only for the recipient. Consequently, when the sender opens their chat on a second device or refreshes the page, they cannot decrypt their own sent messages. CipherLink resolves this via a **Dual-Envelope Cryptographic Pipeline**:
+* For every message, an ephemeral 256-bit AES-GCM key is minted.
+* The message is encrypted with this ephemeral key.
+* The ephemeral key is encapsulated **twice**:
+  * $E_{\text{receiver}} = \text{RSA-OAEP}(\text{Key}, \text{PubKey}_{\text{receiver}})$
+  * $E_{\text{sender}} = \text{RSA-OAEP}(\text{Key}, \text{PubKey}_{\text{sender}})$
+* Both envelopes are stored. Either participant can independently unwrap the symmetric key using their own private key, enabling cross-device synchronization while preserving zero-knowledge security.
+
+#### 3. Biometric Face Authentication & Hybrid In-Transit Shield
+* **Face Descriptor Extraction:** On the login screen, `face-api.js` captures webcam video, runs SSD MobileNet V1 to detect 68 facial landmarks, and computes a 128-dimensional floating point descriptor vector.
+* **Hybrid Application-Layer Encryption:** Facial vectors represent sensitive biometric PII. To protect against TLS termination interception, the client encrypts the 128D vector using an application-layer hybrid envelope (`rsaB64.ivB64.payloadB64`) before sending it to the server.
+* **Euclidean Verification:** The server decrypts the vector and computes the Euclidean distance against the registered biometric baseline:
+  $$D = \sqrt{\sum_{i=1}^{128} (v_{\text{candidate}, i} - v_{\text{enrolled}, i})^2}$$
+  A distance $D < 0.45$ mathematically authenticates the user, issuing an authenticated JWT session.
+
+#### 4. Enterprise Admin Sudo Mode & Cryptographic Wipe Protocol
+* **Sudo Protection:** Destructive admin actions (`/api/admin/users/:id`, `/api/admin/wipe`) require re-authentication via password or live biometric scan to generate an ephemeral `sudo-token`.
+* **Cryptographic Data Sanitization:** When a user account is deleted, the system executes a physical **Wipe Protocol**: all associated encrypted chat records are overwritten with randomized cryptogram tombstones, guaranteeing forward secrecy and compliance with GDPR "Right to be Forgotten" standards.
+
+### Top Interview Questions & Battle-Tested Answers
+
+#### Q1: "How does CipherLink guarantee that database administrators cannot read user chats?"
+> **Answer:**  
+> *"CipherLink enforces client-side zero-knowledge encryption using the browser's native Web Crypto API. When a user creates an account, an RSA-OAEP 2048-bit keypair is generated in browser memory. The private key is immediately encrypted with an AES-GCM 256-bit key derived from the user's password via PBKDF2 (100,000 iterations) before transmission. The server and MongoDB only ever store the public key and the encrypted private key envelope. Because the server never possesses the user's password or unencrypted private key, even a root database administrator inspecting MongoDB sees only high-entropy AES ciphertext."*
+
+#### Q2: "Why did you implement Dual-Envelope encryption instead of single-key encryption?"
+> **Answer:**  
+> *"If an E2EE platform encrypts message payloads solely using the recipient's public key, the sender loses the ability to decrypt and review their own sent conversation history upon refreshing or logging in from another device. To solve this, we generate a unique, ephemeral AES-256-GCM key for every individual message. The message body is encrypted once with this AES key, and then the AES key itself is encrypted twice: once with the recipient's public key and once with the sender's public key. Both encrypted envelopes accompany the payload. This allows both parties to independently unwrap the message using their own private keys while maintaining true zero-knowledge privacy from the server."*
+
+#### Q3: "How does biometric face login work securely over the network?"
+> **Answer:**  
+> *"We utilize `face-api.js` powered by TensorFlow.js on the client to extract 68 facial landmarks and compute a 128-dimensional normalized floating-point descriptor vector. To ensure this biometric vector cannot be intercepted by TLS inspection proxies, we apply an application-layer hybrid encryption scheme (RSA-2048 + AES-256-CBC) before network dispatch. On the backend, the vector is decrypted in isolated memory and evaluated against the user's enrolled facial vector using Euclidean distance matching. If the distance is under the 0.45 threshold, access is granted without ever transmitting or storing raw face images."*
 
 ---
 
