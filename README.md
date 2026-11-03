@@ -8,7 +8,7 @@
 
 ---
 
-## 📑 Master Navigation Index (24 Projects)
+## 📑 Master Navigation Index (25 Projects)
 
 | # | Actual Folder Name on Disk | Project Name | Domain / Category | GitHub Repository |
 | :-: | :--- | :--- | :--- | :--- |
@@ -36,6 +36,7 @@
 | **22** | [`link please`](#22-linkplease-auto-dm---instagram-webhook-automation) | **LinkPlease Auto-DM** | High-Throughput Webhook Processing | [🔗 Workstation / Intern Assignment](https://github.com/Santhosh939s/AllProjectsSummary) |
 | **23** | [`cyber`](#23-cyber-triage-agent) | **Security Engineering Triage Agent** | Autonomous Vulnerability Remediation | [🔗 Workstation / Security Triage](https://github.com/Santhosh939s/AllProjectsSummary) |
 | **24** | [`web data store`](#24-webdatastore) | **WebDataStore** | Zero-Database Cross-Device Sync | [🔗 Santhosh939s/WebDataStore](https://github.com/Santhosh939s/WebDataStore) |
+| **25** | [`S:\google`](#25-rapid-crisis-response-system-crisislink) | **CrisisLink (Rapid Crisis Response)** | Emergency Ops & Multi-Tenant Dispatch | [🔗 Santhosh939s/Rapid-Crisis-Response](https://github.com/Santhosh939s/Rapid-Crisis-Response.git) |
 
 ---
 
@@ -804,6 +805,56 @@ Developers frequently need a dead-simple way to copy IP addresses, temporary pas
 ### Key Features & Engineering Highlights
 * **Zero Database Required:** Operates immediately in any browser with zero installation, configuration strings, or database servers.
 * **Instant Device Handoff:** One-click clipboard copy helpers and dynamic QR code generation.
+
+---
+
+## 25. Rapid Crisis Response System (CrisisLink)
+* **Actual Folder Name on Disk:** `S:\google`
+* **Official Project Name:** Rapid Crisis Response System (CrisisLink)
+* **GitHub Repository:** [https://github.com/Santhosh939s/Rapid-Crisis-Response.git](https://github.com/Santhosh939s/Rapid-Crisis-Response.git)
+* **Domain / Category:** Enterprise Emergency Operations Center (EOC), Multi-Tenant Incident Dispatch, Live Geolocation Tracking & AI Assessment
+
+### Why It Was Made (Problem Statement & Purpose)
+In large-scale facilities and hospitality venues (resorts, hotels, enterprise campuses, and healthcare networks), emergency response is frequently hindered by fragmented communication: guests in panic struggle to communicate their exact location, commanders lack real-time visibility over field staff coordinates, and responders lack contextual standard operating procedures (SOPs) for high-stakes incidents (medical emergencies, grease/chemical fires, security breaches). CrisisLink was engineered as a high-availability Emergency Operations Center (EOC) platform connecting guests, commanders, and responders with sub-second WebSocket state synchronization, live GPS telemetry on tactical vector maps, and automated Gemini AI disaster guidance.
+
+### Complete Tech Stack
+* **Frontend Framework:** Next.js 14+ (App Router), React 19, TypeScript.
+* **UI & Visual Design:** Tailwind CSS (Tactical Dark Mode & Glassmorphism), Framer Motion, Lucide Icons, Recharts (Real-time response KPIs).
+* **Mapping & Geolocation:** React-Leaflet, Leaflet, HTML5 `navigator.geolocation` API, Vector Polylines for active dispatch trajectory rendering.
+* **Backend Architecture:** Node.js, Express.js (TypeScript), Domain-Driven Design (DDD) with `domains/incident`, `domains/building`, and `domains/assessment`.
+* **Multi-Tenancy & Middleware:** Custom `tenantMiddleware` enforcing tenant isolation via `x-tenant-id` request headers.
+* **Event-Driven Pub/Sub:** In-memory asynchronous `EventBus` (`IncidentCreated` events triggering automated `operationalPipeline.runPipeline`).
+* **Database & Authentication:** Firebase Realtime Database (WebSocket-based zero-refresh NoSQL synchronization across all connected roles), Firebase Authentication (RBAC: Commander, Staff, Guest).
+* **Artificial Intelligence:** Google Gemini AI API (`@google/generative-ai`) for real-time tactical SOP emergency instructions, automated incident severity triage, and post-incident "Lessons Learned" debrief analysis.
+* **Audio & Notification Infrastructure:** Web Audio API (real-time high-pitch frequency synthesizer for audible emergency alarm pings), Browser Notifications API, PWA Service Worker (`sw.js`) with Stale-While-Revalidate offline caching.
+* **Interactive Multi-Role Simulation:** Automated 3-way split-screen "God Mode" view utilizing the `BroadcastChannel` browser API and `postMessage` for zero-database live demonstration.
+
+### How It Operates (Architecture & Request Flow)
+1. **Frictionless SOS Reporting (Guest Portal):**
+   * Panicked individuals access a mobile-optimized SOS portal requiring no prior login.
+   * Selecting an emergency type (Medical, Fire/Smoke, Security) captures both the guest's designated room number and their high-precision device GPS coordinates via `navigator.geolocation`.
+   * Submitting the SOS writes the incident payload directly to the Firebase Realtime Database and dispatches an event through the backend `EventBus`.
+2. **Tactical EOC Command & Triage (Commander Dashboard):**
+   * The incident instantly appears on the Commander's tactical dark-mode dashboard without refreshing the page.
+   * The Web Audio synthesizer triggers an audible emergency alarm chime, while background browser push notifications alert off-tab dispatchers.
+   * Google Gemini AI immediately processes the emergency category and outputs contextual, step-by-step Standard Operating Procedures (SOPs).
+3. **Proximity-Based Dispatch & Vector Routing:**
+   * On-ground staff members continuously stream their GPS coordinates to Firebase.
+   * The Commander views available responders on an interactive Leaflet map and dispatches the closest staff member with one click.
+   * Dynamic vector polylines calculate and draw the active response route directly on the tactical map.
+4. **Field Execution & Incident Lifecycle (Staff Mobile Portal):**
+   * Responders receive an instant mobile dispatch alert with guest coordinates and Gemini SOP guidelines.
+   * Responders transition the incident through its lifecycle: `New` $\rightarrow$ `Claimed` $\rightarrow$ `Dispatched` $\rightarrow$ `Resolved`.
+   * Updating status to "Resolved" from the field instantly clears the Commander's active alert queue in real time.
+5. **AI Debrief & Executive Reporting:**
+   * Upon resolution, Gemini AI analyzes incident timestamps, response latency, and actions taken to generate an automated "Lessons Learned" incident summary.
+   * Commanders can export the complete forensic audit trail as a styled executive PDF (`window.print` with custom print-media CSS).
+
+### Key Features & Engineering Highlights
+* **Domain-Driven Multi-Tenant Backend:** Decoupled Express TypeScript backend supporting campus, building, and floor hierarchies (`/api/v1/campuses`, `/api/v1/buildings`) with header-based tenant isolation.
+* **Sub-Second Real-Time Synchronization:** 100% event-driven Firebase Realtime Database architecture eliminates polling; updates propagate across all viewports in $< 100\text{ms}$.
+* **Automated 3-Way "God Mode" Demo:** Employs the `BroadcastChannel` browser API to orchestrate a live 3-pane synchronized simulation (Guest, Commander, Staff) across isolated iframes without polluting production database records.
+* **Web Audio Frequency Synthesizer:** Native Web Audio API oscillator creates non-blocking audio alerts even when the tab is minimized or running in the background.
 
 ---
 
