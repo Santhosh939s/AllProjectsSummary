@@ -552,3 +552,4 @@ In naive E2EE systems, messages are encrypted only for the recipient. Consequent
 * **Cryptographic Data Sanitization:** When a user account is deleted, the system executes a physical **Wipe Protocol**: all associated encrypted chat records are overwritten with randomized cryptogram tombstones, guaranteeing forward secrecy and compliance with GDPR "Right to be Forgotten" standards.
 
 ---
+
